@@ -1,5 +1,5 @@
 # Programming Tutor Resources
 By Declan Loo (2nd Year UCL CS)
 
-Resources covered:
-9/10 - intro.ipynb
+week 1-5 : C + Python fundamentals / OOP
+week 6-10 : Haskell

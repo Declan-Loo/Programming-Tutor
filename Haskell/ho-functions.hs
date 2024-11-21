@@ -39,3 +39,21 @@ foldr1' :: (a -> a -> a) -> [a] -> a
 foldr1' f [x] = x
 foldr1' f (x:xs) = f x (foldr1' f xs)
 
+-- Many ways to find length of a list
+-- recursion
+length' :: [a] -> Int
+length' [] = 0
+length' (x:xs) = 1 + length' xs
+
+-- using foldr
+length'' :: [a] -> Int
+length'' ls = foldr(\x acc -> acc + 1) 0 ls
+
+-- using foldl
+length''' :: [a] -> Int
+length''' ls = foldl(\acc x -> acc + 1) 0 ls
+
+-- Counting the number of positive numbers in a list with foldr
+countPositives' :: (Ord a, Num a) => [a] -> Int
+countPositives' ls = foldr(\x acc -> if x > 0 then acc + 1 else acc) 0 ls
+
